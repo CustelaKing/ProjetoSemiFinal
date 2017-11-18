@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="498.0" prefWidth="612.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="banco_de_dados.TelaHomeController">
+   <center>
+      <TabPane fx:id="tabPane" prefHeight="489.0" prefWidth="418.0" tabClosingPolicy="ALL_TABS" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </BorderPane.margin>
+      </TabPane>
+   </center>
+   <left>
+      <Accordion BorderPane.alignment="CENTER">
+        <panes>
+          <TitledPane alignment="CENTER" animated="false" prefHeight="493.0" prefWidth="102.0" text="Cadastro">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="462.0" prefWidth="0.0">
+                     <children>
+                        <Button alignment="TOP_CENTER" layoutX="11.0" layoutY="14.0" mnemonicParsing="false" onAction="#abreJanelaAluno" text="Aluno" />
+                        <Button layoutX="11.0" layoutY="45.0" mnemonicParsing="false" onAction="#abreJanelaCidade" text="Cidade" />
+                        <Button layoutX="12.0" layoutY="76.0" mnemonicParsing="false" onAction="#abreJanelaCurso" text="Curso" />
+                        <Button layoutX="11.0" layoutY="107.0" mnemonicParsing="false" onAction="#abreJanelaMatricula" text="Matrícula" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+   </left>
+   <top>
+      <Label text="Sistema de Matrícula" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Label>
+   </top>
+</BorderPane>

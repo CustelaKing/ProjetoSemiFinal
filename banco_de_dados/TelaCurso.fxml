@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="455.0" prefWidth="502.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="banco_de_dados.TelaCursoController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Nome">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txtCurso" onKeyPressed="#filtraCarac" onKeyReleased="#filtraCarac" onKeyTyped="#filtraCarac" promptText="Digite o nome do Curso">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="5.0" right="50.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <HBox alignment="CENTER" prefHeight="45.0" prefWidth="502.0">
+               <children>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#insereCurso" text="Incluir">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#alteraCurso" text="Alterar">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#excluiCurso" text="Excluir">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="71.0" prefWidth="502.0">
+               <children>
+                  <Label text="Filtro">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtFiltroCurso" onKeyPressed="#filtraCurso" onKeyReleased="#filtraCurso" onKeyTyped="#filtraCurso">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <TableView fx:id="tblCurso" onMouseClicked="#clicaTblCurso" prefHeight="319.0" prefWidth="502.0">
+              <columns>
+                <TableColumn fx:id="colCurso" prefWidth="501.0" text="Nome" />
+              </columns>
+            </TableView>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>
